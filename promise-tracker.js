@@ -155,7 +155,7 @@ angular.module('ajoslin.promise-tracker')
       };
 
       //Fire an event bound with #on().
-      //@param options: {id: uniqueId, event: string, value: someValue}
+      //#param options: {id: uniqueId, event: string, value: someValue}
       //Calls registered callbacks for `event` with params (`value`, `id`)
       function fireEvent(options) {
         angular.forEach(callbacks[options.event], function(cb) {
@@ -164,8 +164,8 @@ angular.module('ajoslin.promise-tracker')
       }
 
       //Create a promise that will make our tracker active until it is resolved.
-      //@param startArg: params to pass to 'start' event
-      //@return deferred - our deferred object that is being tracked
+      //#param startArg: params to pass to 'start' event
+      //#return deferred - our deferred object that is being tracked
       function createPromise(startArg) {
         //We create our own promise to track. This usually piggybacks on a given
         //promise, or we give it back and someone else can resolve it (like 
